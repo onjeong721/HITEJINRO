@@ -1,0 +1,86 @@
+#news {
+}
+#news div.wrap {
+  max-width: 1200px;
+}
+#news div.wrap h2 {
+  
+}
+#news div.wrap article {
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#news div.wrap article a {
+  display: grid;
+  grid-template-columns: 99px 890px 130px;
+  grid-template-rows: 26px auto auto;
+  row-gap: 12px;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  transition: all 1s;
+}
+#news div.wrap article a:hover{
+  border-color: blue;
+}
+#news div.wrap article a h3 {
+  order: 2;
+  font-size: 22px;
+}
+#news div.wrap article a p {
+  order: 4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#news div.wrap article a time {
+  order: 1;
+  grid-row: 1 / span 3;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: left;
+  align-items: center;
+  gap: 9px;
+  color: #ccc;
+  transition: all 1s;
+}
+#news div.wrap article a:hover time{
+  color: blue;
+}
+#news div.wrap article a time span {
+  order: 1;
+  font-size: 46px;
+}
+#news div.wrap article a > span {
+  order: 3;
+  transform: translateY(38%);
+  transition: all 1s; 
+}
+#news div.wrap article a:hover > span{
+  border-color: blue;
+}
+#news div.wrap article a > span::before{
+  transition: all 1s;
+}
+#news div.wrap article a:hover > span::before{
+  border-color: blue;
+}
+#news div.wrap > a.list {
+  display: block;
+  width: 80px;
+  border: 1px solid;
+  line-height: 3;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+#news div.wrap > a.list::before{
+  content: "";
+  background-image: url(../img/ham.svg);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: contain;
+  vertical-align: -4px;
+  margin-right: 4px;
+}

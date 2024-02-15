@@ -1,0 +1,66 @@
+#stockir {
+  
+}
+#stockir .wrap {
+  max-width: 1200px;
+}
+#stockir .wrap article {
+  
+  width: 50%;
+  width: calc(100% / 2);
+}
+#stockir .wrap article h2 {
+  
+}
+#stockir .wrap article.stock {
+  
+  border-right: 1px solid #ccc;
+  padding-right: 30px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#stockir .wrap article.stock h2 {
+  
+  order: 1;
+  grid-column: 1 / span 2;
+}
+#stockir .wrap article.stock p.price {
+  
+  order: 3;
+  grid-row: 2 / span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#stockir .wrap article.stock time {
+  
+  order: 2;
+  text-align: right;
+}
+#stockir .wrap article.stock p.up {
+  
+  order: 4;
+  text-align: right;
+}
+#stockir .wrap article.ir {
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+#stockir .wrap article.ir h2 {
+  
+}
+#stockir .wrap article.ir ul {
+  
+}
+#stockir .wrap article.ir ul li {
+  
+}
+#stockir .wrap article.ir ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+#stockir .wrap article.ir ul li a time {
+  
+}

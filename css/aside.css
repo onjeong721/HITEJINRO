@@ -1,0 +1,196 @@
+aside {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  right: -100px;
+  top: 0;
+  background-color: #2f3339;
+  min-height: 600px;
+  transition: 1s;
+  z-index: 1;
+}
+aside .wrap {
+  width: 100px;
+  margin: 0;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 30px 1fr 50px;
+  grid-template-columns: 1fr;
+}
+aside .wrap h2 {
+  text-transform: uppercase;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+aside .wrap ul.list {
+  display: grid;
+  grid-template-rows: repeat(8,1fr);
+  text-align: center;
+}
+aside .wrap ul.list > li {
+  
+}
+aside .wrap ul.list > li h3 {
+  height: 100%;
+  position: relative;
+}
+aside .wrap ul.list > li h3::before{
+  content:"";
+  display: block;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+aside .wrap ul.list > li h3.current::before{
+   width: 100%;
+}
+aside .wrap ul.list > li:nth-child(1) h3::before{
+ background-color: orange;
+}
+aside .wrap ul.list > li:nth-child(2) h3::before{
+ background-color: yellow;
+}
+aside .wrap ul.list > li:nth-child(3) h3::before{
+background-color: green;
+}
+aside .wrap ul.list > li:nth-child(4) h3::before{
+ background-color: blue;
+}
+aside .wrap ul.list > li:nth-child(5) h3::before{
+ background-color: red;
+}
+aside .wrap ul.list > li:nth-child(6) h3::before{
+ background-color: gold;
+}
+aside .wrap ul.list > li:nth-child(7) h3::before{
+ background-color: cyan;
+}
+aside .wrap ul.list > li:nth-child(9) h3::before{
+ background-color:  brown;
+}
+aside .wrap ul.list > li h3 a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  flex-direction: column;
+  gap: 5px;
+  color: #bba7a7;
+  position: relative;
+}
+aside .wrap ul.list > li h3 a::before{
+  content:""; 
+  width: 41px;
+  height: 41px;
+  display: block;
+  background-image: url(../img/aside/gnb_brand_menu.png);
+  opacity: 0.5;
+}
+aside .wrap ul.list > li:nth-child(1) h3 a::before{
+  background-position-y: 0;
+}
+aside .wrap ul.list > li:nth-child(2) h3 a::before{
+  background-position-y: -41px;
+}
+aside .wrap ul.list > li:nth-child(3) h3 a::before{
+  background-position-y: calc(-41px * 2);
+}
+aside .wrap ul.list > li:nth-child(4) h3 a::before{
+  background-position-y: calc(-41px * 3);
+}
+aside .wrap ul.list > li:nth-child(5) h3 a::before{
+  background-position-y: calc(-41px * 4);
+}
+aside .wrap ul.list > li:nth-child(6) h3 a::before{
+  background-position-y: calc(-41px * 5);
+}
+aside .wrap ul.list > li:nth-child(7) h3 a::before{
+  background-position-y: calc(-41px * 6);
+}
+aside .wrap ul.list > li:nth-child(8) h3 a::before{
+  background-position-y: calc(-41px * 7);
+}
+aside .wrap ul.list > li div{
+  display: none;
+}
+aside .wrap ul.list > li ul.listsub {
+  position: absolute;
+  right: 0;
+  top: 0;
+  /*! display: none; */
+  height: 100%;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+aside .wrap ul.list > li ul.listsub::before{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 100%;
+/*   transition: 0.3s; */
+  top: 0;
+}
+aside .wrap ul.list > li ul.listsub.wide::before{
+/*   width: 100%; */
+  animation-name: wide;
+  animation-delay: 0.3s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function:ease-out;
+}
+@keyframes wide{
+  100%{
+     width: 100%;
+  }
+}
+aside .wrap ul.list > li:nth-child(1) ul.listsub::before{
+  background-color: orange;
+}
+aside .wrap ul.list > li:nth-child(2) ul.listsub::before{
+  background-color: yellow;
+}
+aside .wrap ul.list > li:nth-child(3) ul.listsub::before{
+  background-color: green;
+}
+aside .wrap ul.list > li:nth-child(4) ul.listsub::before{
+  background-color: blue;
+}
+aside .wrap ul.list > li:nth-child(5) ul.listsub::before{
+  background-color: red;
+}
+aside .wrap ul.list > li:nth-child(6) ul.listsub::before{
+  background-color: gold;
+}
+aside .wrap ul.list > li:nth-child(7) ul.listsub::before{
+  background-color: cyan;
+}
+aside .wrap ul.list > li:nth-child(8) ul.listsub::before{
+  background-color:  brown;
+}
+aside .wrap ul.list > li ul.listsub li {
+  position: relative;
+}
+aside .wrap ul.list > li ul.listsub li a {
+  width: 100px;
+  overflow: hidden;
+}
+aside .wrap ul.list > li ul.listsub li a img {
+  transition: 0.5s;
+}
+aside .wrap ul.list > li ul.listsub li a img:hover{
+  transform: translateX(-100px);
+}
+.sliding{
+  right: 0px !important;; 
+}
+.slideHide{
+  right: -200px;
+}

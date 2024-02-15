@@ -1,0 +1,41 @@
+div.wgnb {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+}
+
+div.wgnb div.center {
+  
+  width: 586px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  transform: translateX(6px);
+}
+div.wgnb div.center div.wsub {
+  width: 92.5px;
+  padding: 15px 0;
+}
+div.wgnb div.center div.wsub:not(:last-child){
+  border-right:1px solid #fff; 
+}
+div.wgnb div.center div.wsub:nth-child(3){
+  width: 123.8px;
+}
+div.wgnb div.center div.wsub h2 {
+  
+}
+div.wgnb div.center div.wsub ul {
+  
+}
+div.wgnb div.center div.wsub ul li {
+  
+}
+div.wgnb div.center div.wsub ul li a {
+  color: #ccc;
+  line-height: 1.7;
+  display: block;
+  font-size: 15px;
+}

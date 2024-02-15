@@ -1,0 +1,120 @@
+#business {
+  
+}
+#business .wrap {
+  
+  padding-top: 150px;
+}
+#business .wrap h2 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#business .wrap article {
+  padding: 100px 0;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#business .wrap article:nth-of-type(2){
+  padding-left: 62.5%;
+  box-sizing: border-box;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+#business .wrap article:nth-of-type(3){
+  background-image: url(../img/busi3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 200px 0;
+  padding-left: calc((100% - 1200px) / 2);
+}
+#business .wrap article h3 {
+  /*! line-height: 3; */
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+#business .wrap article:nth-of-type(1) h3{
+  color: #000;
+}
+#business .wrap article h3 span {
+  margin: 20px 0;
+  color: black;
+}
+#business .wrap article p {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  color: black;
+}
+#business .wrap article a {
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s;
+  overflow: hidden;
+  color: black;
+}
+#business .wrap article a:hover{
+  color: white;
+  background-color: #333;
+}
+#business .wrap article a::after{
+  content: "";
+  width: 0px;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  transform: skewX(-30deg);
+  transform-origin: 0 0;
+  transition: all 1s;
+  z-index: -1;
+}
+#business .wrap article a:hover::after{
+  width: 120%;
+}
+#business .wrap article:nth-of-type(1)::after{
+  content: "";
+  width: 700px;
+  height: 700px;
+  display: block;
+  background-image: url(../img/busi1.jpg);
+  position: absolute;
+  right: 78px;
+  top: -250px;
+  z-index: 2;
+  background-position: center;
+  background-size: cover;
+}
+#business .wrap article:nth-of-type(2)::before{
+  content: "";
+  width: 573px;
+  height: 680px;
+  display: block;
+  background-image: url(../img/busi2.jpg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+#business .wrap article:nth-of-type(2)::after{
+  content: "";
+  width: 931px;
+  height: 847px;
+  display: block;
+  background-image: url(../img/busi4.jpg);
+  position: absolute;
+  right: -200px;
+  top: -100px;
+  z-index: 1;
+}
+#business .wrap article:nth-of-type(3)>*{
+  color: white;
+}
+#business .wrap article:nth-of-type(3) h3 span{
+  color: white;
+}

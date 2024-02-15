@@ -1,0 +1,50 @@
+#office {
+  
+}
+#office .wrap {
+  width: 100%;
+  max-width: 100%;
+}
+#office .wrap h2 {
+  
+}
+#office .wrap ul {
+  
+  height: 325px;
+}
+#office .wrap ul li {
+  width: 50%;
+  background-size:100% 100%;
+  background-position: center;
+  transition: all 1s;
+  background-repeat: no-repeat;
+}
+#office .wrap ul li:hover{
+   background-size: 110% 110%;
+}
+#office .wrap ul li a {
+  height: 100%;
+  color: white;
+}
+#office .wrap ul li a hgroup {
+  text-align: center;
+}
+#office .wrap ul li a hgroup h3 {
+  
+}
+#office .wrap ul li a hgroup h4 {
+  line-height: 2;
+}
+#office .wrap ul li a span.arrow {
+  font-size: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/arrow.svg);
+  background-size: contain;
+}
+#office .wrap ul li:nth-child(1) {
+  background-image: url(../img/office1.jpg);
+}
+#office .wrap ul li:nth-child(2) {
+  background-image: url(../img/office2.jpg);
+}

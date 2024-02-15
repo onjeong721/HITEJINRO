@@ -1,0 +1,100 @@
+#green {
+  /*! background-color: #eee; */
+}
+#green .wrap {
+  max-width: 1200px;
+}
+#green .wrap h2 {
+  
+  margin-bottom: 80px;
+}
+#green .wrap ul {
+  
+  gap: 20px;
+}
+#green .wrap ul li {
+  width: calc(100% / 3);
+  transition: all 1s;
+  border: 3px solid transparent;
+}
+
+#green .wrap ul li::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#green .wrap ul li:nth-child(1)::before{
+  background-image: url(../img/green1.jpg);
+}
+#green .wrap ul li:nth-child(2)::before{
+  background-image: url(../img/green2.jpg);
+}
+#green .wrap ul li:nth-child(3)::before{
+  background-image: url(../img/green3.jpg);
+}
+#green .wrap ul li h3 {
+  line-height: 3;
+  transform: translateY(7px);
+}
+#green .wrap ul li p {
+  
+}
+#green .wrap ul li p span {
+  
+}
+#green .wrap a.siteview {
+  border: 1px solid #333;
+  padding: 15px;
+  width: 180px;
+  display: block;
+  box-sizing: border-box;
+  margin-left: calc(100% / 3 * 2 + 10px);
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#green .wrap a.siteview:hover{
+  color: white;
+}
+#green .wrap a.siteview::before {
+  content: "";
+  width: 0px;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  background-color: black;
+  transform: skewX(-30deg);
+  transform-origin: 0 0;
+  transition: all 1s;
+  z-index: -1;
+  top: 0;
+}
+#green .wrap a.siteview span{
+  
+}
+#green .wrap a.siteview:hover::before{
+  width: 120%;
+}
+#green .wrap a.siteview::after{
+  content: "";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-image: url(../img/login.svg);
+  background-size: contain;
+  vertical-align: -9px;
+}
+#green .wrap a.siteview:hover::after{
+  background-image: url(../img/login-white.svg);
+}
+.current{
+  border: 3px solid red !important;
+}

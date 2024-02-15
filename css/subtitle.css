@@ -1,0 +1,54 @@
+div#subtitle {
+
+}
+div#subtitle .wrap {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+div#subtitle button{
+  z-index: 1;
+}
+div#subtitle button::before{
+  font-size: 13px;
+  opacity: 1;
+  color: #fff;
+  transition: 0.5s;
+}
+div#subtitle .titleani>button::before{
+  content: "";
+
+  width: 60px;
+  height: 60px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+div#subtitle .titleani>button.slick-prev::before{
+    background-image: url(../img/left-arrow.svg);
+}
+div#subtitle .titleani>button.slick-prev:hover::before{
+    background-image: url(../img/left-arrow-black.svg);
+}
+div#subtitle .titleani>button.slick-next::before{
+    background-image: url(../img/right-arrow.svg);
+}
+div#subtitle .titleani>button.slick-next:hover::before{
+    background-image: url(../img/right-arrow-black.svg);
+}
+div#subtitle .slick-active button::before{
+  color: #2a98d5;
+  transform: scale(1.5);
+}
+div#subtitle .slick-prev{
+  left: 30px;
+}
+div#subtitle .slick-next{
+  right: 30px;
+}
+div#subtitle .wrap img {
+
+}
+
+div#subtitle .wrap .slick-dots{
+ bottom: 18px;
+}
