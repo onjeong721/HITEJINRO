@@ -2,7 +2,6 @@
 @media screen and (max-width:1440px){
 /*  헤더  */
   body{
-  
   padding-right: 100px;
 }
   header .wrap nav{
@@ -11,6 +10,8 @@
   }
   header .wrap nav h1{
     grid-column: 1;
+    grid-row: 1;
+    justify-self: auto;
   }
   header .wrap nav ul.gnb{
   grid-column: 1 / span 2;
@@ -18,10 +19,10 @@
   justify-self: center;
   }
   header .wrap nav ul.enb{
-  grid-column: 3;
-  grid-row: 1;
-  position: relative;
-  justify-self: center;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    justify-self: end;
   }
 }
 
@@ -45,6 +46,88 @@
   header .wrap nav ul.enb{
     display: none;
   }
+  header .wrap nav .wgnb{
+  width: 80%;
+  height: 100vh;
+  left: -80%;
+  top: 0;
+   background-color: white;
+  transition: 1s;
+  display: block !important;
+  }
+
+  .wgnbShow{
+    left: 0 !important;
+    display: block !important;
+  }
+  header .wrap nav .wgnb >a{
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: url(../img/close.svg) no-repeat center /contain;
+  }
+  header .wrap nav .wgnb .wsub{
+    padding-left: 30px;
+    display: initial;
+    position: initial;
+  }
+  header .wrap nav .wgnb h2{
+    display: block;
+    line-height: 3;
+    cursor: pointer;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.7;
+    color: #333;
+  }
+  header .wrap nav .wgnb h2::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/more_down.svg) no-repeat center /contain;
+    transition: 0.5s;
+  }
+  header .wrap nav .wgnb h2.currentH2::after{
+    transform: rotate(180deg);
+  }
+  .currentH2{
+    color: blue;
+  }
+  header .wrap nav .wgnb ul{ 
+    display: none;
+    text-align: left;
+    margin-left: -65px;
+    margin-right: -20px;
+    background-color: #eee;
+    padding-left: 65px;
+  }
+  header .wrap nav .wgnb .wsub ul.sub1{
+    display: initial;
+    display: none;
+  }
+  header .wrap nav .wgnb ul.sub2{   
+    display: none;
+  }
+  header .wrap nav .wgnb ul li{
+
+  }
+  header .wrap nav .wgnb ul.sub1 > li:nth-child(n+4){
+    border-left: none;
+  }
+  header .wrap nav .wgnb ul li a{
+    line-height: 3;
+    display: block;
+  }
+  header .wrap nav .wgnb ul.sub1 > li > a{
+  color: #333;
+  }
+  header .wrap nav .wgnb ul li:not(:first-child)  a{
+    border-top: 1px solid #ccc;
+  }
+/*  추가1  */
   header .wrap nav{
     grid-template-columns: auto 1fr auto;
     grid-template-rows: 50px;
@@ -69,7 +152,6 @@
   cursor: pointer;
   }
   #product ul.list{
-    
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(4, auto);
   row-gap: 20px;
@@ -116,6 +198,42 @@
     width: auto;
     display: block;
   }
+  aside .wrap ul.list{
+    text-align: left;
+    grid-template-rows: repeat(8,auto);
+  }
+  aside .wrap ul.list{
+      text-align: left;
+      grid-template-rows: repeat(8,auto);
+  }
+  aside .wrap ul.list > li h3::before{
+    display: none;
+  }
+  aside .wrap ul.list > li h3{
+    height: initial;
+  }
+  aside .wrap ul.list > li h3 a{
+  flex-direction: row;
+  justify-content: left;
+  line-height: 4;
+  font-size: 17px;
+  color: #333;
+  }
+  aside .wrap ul.list > li:not(:first-child) h3 a{
+    border-top: 1px solid #ccc;
+  }
+  aside .wrap ul.list > li h3 a::before{
+    background-image: url(../img/aside/gnb_brand_menu.m.png);
+    }
+  aside .wrap ul.list > li h3 a::after{
+    content: "";
+    background: url(../img/아이콘/plus.png) no-repeat center /contain;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
   aside .wrap ul.list > li div{
     display: none;
   }
@@ -125,40 +243,9 @@
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: #eee;
   }
-  aside .wrap ul.list{
-  text-align: left;
-  grid-template-rows: repeat(8,auto);
-  }
-    aside .wrap ul.list > li h3::before{
+  aside .wrap ul.list > li ul.listsub::before{    
     display: none;
-  }
-  aside .wrap ul.list > li h3{
-  height: auto;
-  }
-  aside .wrap ul.list > li h3 a{
-  flex-direction: row;
-  justify-content: left;
-  font-size: 20px;
-  line-height: 3.5;
-  color: #333;
-  position: relative;
-  }
-  aside .wrap ul.list > li:not(:first-child) h3 a{
-    border-top: 1px solid #ccc;
-  }
-  aside .wrap ul.list > li h3 a::before{
-  background-image: url(../img/aside/gnb_brand_menu.m.png);
-  }
-  aside .wrap ul.list > li h3 a::after{
-    content: "";
-    background: url(../img/아이콘/plus.png) no-repeat center /contain;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    position: absolute;
-    right: 0;
   }
   aside .wrap ul.list > li ul.listsub li{
   width: calc(100% / 3);
@@ -169,32 +256,9 @@
   aside .wrap ul.list > li ul.listsub li a img{    
   width: 100%;
   }
-  aside .wrap ul.list > li ul.listsub::before{    
-  display: none;
-  }
-  .asideSliding{
-    right: 0%;
-  }
-/*  푸터  */
-  footer div.wrap{
-  padding-top: 20px;
-  }
-  footer div.wrap ul.fnb{
-  margin-bottom: 20px;
-  }
-  footer div.wrap ul.fnb li a{
-    
-  line-height: 2.2;
-  }
-  footer div.wrap address{
-    font-size: 15px;
-  }
-  footer .btop{
-    
-  right: 20px;
-  top: -245px;
-  }
 }
+
+
 /* ------------------768(960) --------------------*/
 @media screen and (max-width:768px){
 /*  버튼  */
@@ -228,7 +292,6 @@
   font-size: 20px;
   }
   #product ul.list li p{
-    
   font-size: 14px;
   letter-spacing: 0;
   padding: 5px 8px;
@@ -252,8 +315,7 @@
   footer div.wrap ul.fnb li ul.sublist{
     display: none !important;
   }
-
-    footer div.wrap ul.fnb{
+  footer div.wrap ul.fnb{
     text-align: left;
   }
   footer div.wrap ul.fnb{
@@ -263,7 +325,7 @@
     line-height: 2.2;
     font-size: 13px;
   }
-     footer div.wrap ul.fnb2{
+  footer div.wrap ul.fnb2{
     justify-content: center;
   }
   footer div.wrap ul.fnb2 li{

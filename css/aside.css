@@ -66,13 +66,13 @@ aside .wrap ul.list > li:nth-child(5) h3::before{
  background-color: red;
 }
 aside .wrap ul.list > li:nth-child(6) h3::before{
- background-color: gold;
+ background-color: #7829EE;
 }
 aside .wrap ul.list > li:nth-child(7) h3::before{
  background-color: cyan;
 }
-aside .wrap ul.list > li:nth-child(9) h3::before{
- background-color:  brown;
+aside .wrap ul.list > li:nth-child(8) h3::before{
+ background-color:  #FF1A82;
 }
 aside .wrap ul.list > li h3 a {
   height: 100%;
@@ -118,7 +118,6 @@ aside .wrap ul.list > li:nth-child(8) h3 a::before{
   background-position-y: calc(-41px * 7);
 }
 aside .wrap ul.list > li div{
-  display: none;
 }
 aside .wrap ul.list > li ul.listsub {
   position: absolute;
@@ -167,13 +166,13 @@ aside .wrap ul.list > li:nth-child(5) ul.listsub::before{
   background-color: red;
 }
 aside .wrap ul.list > li:nth-child(6) ul.listsub::before{
-  background-color: gold;
+  background-color: #7829EE;
 }
 aside .wrap ul.list > li:nth-child(7) ul.listsub::before{
   background-color: cyan;
 }
 aside .wrap ul.list > li:nth-child(8) ul.listsub::before{
-  background-color:  brown;
+  background-color:  #FF1A82;
 }
 aside .wrap ul.list > li ul.listsub li {
   position: relative;

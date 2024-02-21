@@ -18,6 +18,15 @@
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        
+            $("#top").load("header.html");  // 원하는 파일 경로를 삽입하면 된다
+            $("#footers").load("common/footer.html");  // 추가 인클루드를 원할 경우 이런식으로 추가하면 된다
+        
+        });
+        </script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -209,7 +218,7 @@
                     $(this).toggleClass("currentH2");
                     $(this).parent().siblings().children("h2").removeClass("currenH2");
                     $(this).next().slideToggle();
-                    $(this).parent().siblings().children("ul").slideUp();
+                    $(this).parent().siblings().children("ul.sub1").slideUp();
                 });
             //스크롤이벤트
             //변수지정>스크롤값지정>css스타일변경>클래스추가+css애니메이션(top값 조정))
@@ -238,6 +247,7 @@
                     $("footer .btop").removeClass("topFix");
                 }
 
+
                 //하단 탑버튼 페이지와 같이 이동
                 if($(window).scrollTop()>$("footer").offset().top-$(window).height()){
                     $("footer .btop").removeClass("topFix").css("opacity",1);
@@ -245,6 +255,28 @@
 
 
 
+            });
+            var wsubN; //변수선언
+            //대메뉴오버시 서브를 슬라이드 다운-2024.01.19
+            $("header .wrap nav ul.gnb li a").hover(function(){
+                    $("header .wrap nav .wgnb").stop().slideDown();
+                    //wsub를 보이게 하시오.
+                    wsubN=$(this).parent().index()+1; //마우스 올린 대상의 부모의 순번을 가져와서 넣어라.
+                    $("header .wrap nav .wgnb .wsub:nth-child("+wsubN+")").fadeIn();
+                    $("header .wrap nav .wgnb .wsub:not(:nth-child("+wsubN+"))").fadeOut();
+                });
+            $("header .wrap nav .wgnb").mouseleave(function(){
+                $(this).slideUp();
+            });
+
+            //h1에 마우스 진입하면 wgnb가 슬라이드업
+            $("header .wrap nav h1").mouseenter(function(){
+                $("header .wrap nav .wgnb").slideUp();
+            });
+
+            //top버튼을 클릭하면 실행하시오(문서를 애니메이트하시오)
+            $("footer .btop").click(function(){
+                $("html.body").animate({scrollTop:0},1000);
             });
             console.log($("footer").offset())
             });
@@ -343,13 +375,13 @@
         $(document).ready(function(){
             $("aside .wrap ul.list > li h3").hover(function(){
                 if($(window).width()>1200){
-                $("aside").addClass("sliding");
-                $(this).next().show();
-                $(this).parent().siblings().children(".listsub").hide();
-                $(this).addClass("current");
-                $(this).next().addClass("wide");
-                $(this).parent().siblings().children("h3").removeClass("current");
-                $(this).parent().siblings().children(".listsub").hide().removeClass("wide");
+                    $("aside").addClass("sliding");
+                    $(this).next().find(".listsub").show();
+                    $(this).parent().siblings().find(".listsub").hide();
+                    $(this).addClass("current");
+                    $(this).next().find(".listsub").addClass("wide");
+                    $(this).parent().siblings().children("h3").removeClass("current");
+                    $(this).parent().siblings().find(".listsub").hide().removeClass("wide");
                 }
             });
             //h3 a를 클릭하면 실행하시오
@@ -361,10 +393,11 @@
             });
             $("aside").mouseleave(function(){
                 $("aside").removeClass("sliding");
+                $("aside .wrap ul.list > li h3").removeClass("current");
             });
             // 브랜드 누르면 어사이드 보이기
-            $("header .wrap nav h2").click(function(){
-                $("aside").toggleClass("asideSliding");
+            $("header .wrap nav >h2.h4").click(function(){
+                $("aside").toggleClass("sliding");
                 $("header .wrap nav .wgnb").removeClass("wgnbShow");
             });
         });
@@ -373,86 +406,7 @@
 <body>
     
     <!-- 상단영역 -->
-   <header id="top">
-        <div class="wrap">
-            <nav>
-                <h1 class="h5">
-                    <a href="" class="a">하이트진로</a>
-                </h1>
-                <ul class="gnb">
-                    <li><a href="" class="a">COMPANY</a></li>
-                    <li><a href="" class="a">SOCIAL & MEDIA</a></li>
-                    <li><a href="" class="a">ESG</a></li>
-                    <li><a href="" class="a">CUSTOMER CENTER</a></li>
-                </ul>
-                <ul class="enb">
-                    <li><a href="" class="a">LOGIN</a></li>
-                    <li><a href="" class="a">JOIN</a></li>
-                    <li><a href="" class="a">RECRUIT</a></li>
-                    <li><a href="" class="a">LANGUAGE</a></li>
-                </ul>
-                <div class="wgnb hide">
-                    <div class="center">
-                        <div class="wsub">
-                            <h2 class="hide">COMPANY</h2>
-                            <ul class="text-center">
-                                <li><a href="">회사개요</a></li>
-                                <li><a href="">CEO 인사말</a></li>
-                                <li><a href="">가치체계</a></li>
-                                <li><a href="">연구소</a></li>
-                                <li><a href="">관계사</a></li>
-                                <li><a href="">사업장</a></li>
-                            </ul>
-                        </div>
-                        <div class="wsub">
-                            <h2 class="hide">제품소개</h2>
-                            <ul class="text-center">
-                                <li><a href="">제품정보</a></li>
-                                <li><a href="">주정</a></li>
-                                <li><a href="">석유화학</a></li>
-                                <li><a href="">Color Paste</a></li>
-                                <li><a href="">제품문의</a></li>
-                            </ul>
-                        </div>
-                        <div class="wsub">
-                            <h2 class="hide">지속가능경영</h2>
-                            <ul class="text-center">
-                                <li><a href="">정도경영</a></li>
-                                <li><a href="">환경경영</a></li>
-                                <li><a href="">품질경영</a></li>
-                            </ul>
-                        </div>
-                        <div class="wsub">
-                            <h2 class="hide">투자정보</h2>
-                            <ul class="text-center">
-                                <li><a href="">경영정보</a></li>
-                                <li><a href="">주가정보</a></li>
-                                <li><a href="">재무정보</a></li>
-                                <li><a href="">IR자료실</a></li>
-                            </ul>
-                        </div>
-                        <div class="wsub">
-                            <h2 class="hide">홍보센터</h2>
-                            <ul class="text-center">
-                                <li><a href="">KAI소식</a></li>
-                                <li><a href="">CI소개</a></li>
-                                <li><a href="">사회공헌</a></li>
-                            </ul>
-                        </div>
-                        <div class="wsub">
-                            <h2 class="hide">인재채용</h2>
-                            <ul class="text-center">
-                                <li><a href="">인사제도</a></li>
-                                <li><a href="">채용공고</a></li>
-                                <li><a href="">채용문의</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <a href="" class="ham hide">전체메뉴</a>
-            </nav>
-        </div>
-   </header>
+   <header id="top"> </header>
    <!-- 타이틀영역 -->
    <div id="subtitle" class="height-full">
         <div class="titleani wrap height-full">
