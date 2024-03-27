@@ -1,4 +1,4 @@
-# HITEJINRO 
+# HITEJINRO 디자인클론코딩 반응형 웹페이지 제작
 <img src="https://github.com/onjeong721/HITEJINRO/assets/150096277/224e5ce4-572a-4279-9d60-8eca8e1f47b8" width="80%" height="auto"/>
 
 ## 프로젝트 소개
@@ -7,9 +7,8 @@
 <br>
 
 ## 참여
-  | **김민정** |
-  | :------: |
-  | [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @onejong0721](https://github.com/yeon1615) |
+ * 모란 이젠 IT아카데미 강사 외 수강생
+ <br>
 
 ## 개발환경
 <div display=flex>
@@ -26,13 +25,18 @@
 <br>
 
 ## 기간
+2023년 12월 中
+<br>
 
-## 개선사항
+## 반응형 페이지별 기능
+* 테블릿<br>
+ ![테블릿](https://github.com/onjeong721/HITEJINRO/assets/150096277/3ee97eea-05d9-4c68-a7c6-dc22ede9615f)
 
-## 페이지별 기능
-![setProfile](https://github.com/onjeong721/Bworld/assets/150096277/c3b595a4-b118-4d85-a953-4ad54e162ddd)
-![qksdmdgud](https://github.com/onjeong721/Bworld/assets/150096277/ed298d74-caf4-4f0d-8256-037c92a77448)
-## 오류개선
+<br>
+
+* 모바일<br>
+![모바일](https://github.com/onjeong721/HITEJINRO/assets/150096277/9139ce97-ae93-439b-af5e-d8e62881f2d2)
+
 
 
 ## 프로젝트 구조
